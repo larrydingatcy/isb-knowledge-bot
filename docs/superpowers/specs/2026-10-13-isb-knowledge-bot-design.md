@@ -1,7 +1,7 @@
 # ISB 双语知识库与问答机器人设计规格
 
 **日期：** 2026-10-13  
-**状态：** 待用户最终确认  
+**状态：** 已确认
 **目标仓库：** `larrydingatcy/isb-knowledge-bot`  
 **公开入口：** `https://larrydingatcy.github.io/isb-knowledge-bot/`
 
