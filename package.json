@@ -12,6 +12,7 @@
     "build:index": "tsx scripts/build-index.ts",
     "e2e": "playwright test",
     "ingest": "tsx scripts/ingest.ts",
+    "dragons-gate": "tsx scripts/dragons-gate.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit && tsc -p apps/web/tsconfig.json --noEmit",
     "lint": "eslint ."
