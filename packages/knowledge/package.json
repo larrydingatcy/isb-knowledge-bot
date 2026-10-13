@@ -4,10 +4,13 @@
   "private": true,
   "type": "module",
   "exports": {
+    "./index": "./src/index.ts",
+    "./retrieval": "./src/retrieval.ts",
     "./schema": "./src/schema.ts",
     "./migrations": "./src/migrations.ts"
   },
   "dependencies": {
+    "minisearch": "^7.2.0",
     "zod": "^4.1.0"
   }
 }

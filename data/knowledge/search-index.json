@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "schemaVersion": 1,
+      "id": "isb-official-website",
+      "title": "International School of Beijing official website",
+      "content": "The International School of Beijing publishes public school information on its official website.",
+      "language": "en",
+      "category": "policies",
+      "tags": [
+        "official",
+        "school"
+      ],
+      "sourceId": "isb-public-site",
+      "sourceUrl": "https://www.isb.cn/",
+      "sourceType": "official-web",
+      "publishedAt": "2026-10-13T00:00:00.000Z",
+      "validFrom": "2026-10-13T00:00:00.000Z",
+      "validUntil": "2027-10-13T00:00:00.000Z",
+      "crawledAt": "2026-10-13T08:00:00.000Z",
+      "contentHash": "d0f5debecf2c32f1eda9c9406083356161b8c596ba1a12d023aedeec3d0ed04f",
+      "upstreamVersion": "seed-2026-10-13",
+      "visibility": "public",
+      "reviewStatus": "approved",
+      "confidence": 1,
+      "warnings": []
+    }
+  ],
+  "miniSearch": {
+    "documentCount": 1,
+    "nextId": 1,
+    "documentIds": {
+      "0": "isb-official-website"
+    },
+    "fieldIds": {
+      "title": 0,
+      "content": 1,
+      "category": 2,
+      "tags": 3
+    },
+    "fieldLength": {
+      "0": [
+        6,
+        12,
+        1,
+        2
+      ]
+    },
+    "averageFieldLength": [
+      6,
+      12,
+      1,
+      2
+    ],
+    "storedFields": {},
+    "dirtCount": 0,
+    "index": [
+      [
+        "policies",
+        {
+          "2": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "public",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "publishes",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "its",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "information",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "international",
+        {
+          "0": {
+            "0": 1
+          },
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "on",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "official",
+        {
+          "0": {
+            "0": 1
+          },
+          "1": {
+            "0": 1
+          },
+          "3": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "of",
+        {
+          "0": {
+            "0": 1
+          },
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "the",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "website",
+        {
+          "0": {
+            "0": 1
+          },
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "beijing",
+        {
+          "0": {
+            "0": 1
+          },
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "school",
+        {
+          "0": {
+            "0": 1
+          },
+          "1": {
+            "0": 1
+          },
+          "3": {
+            "0": 1
+          }
+        }
+      ]
+    ],
+    "serializationVersion": 2
+  }
+}
