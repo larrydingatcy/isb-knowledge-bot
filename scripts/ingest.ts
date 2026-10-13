@@ -1,5 +1,5 @@
-import { writeFile, mkdir } from "node:fs/promises";
-import { basename, resolve } from "node:path";
+import { writeFile, mkdir, readFile, rm } from "node:fs/promises";
+import { basename, join, resolve } from "node:path";
 import { isIP } from "node:net";
 import { promises as dns } from "node:dns";
 import { pathToFileURL } from "node:url";
@@ -11,6 +11,8 @@ import { createAdapter } from "../packages/ingestion/src/adapters/registry.js";
 import type { RawDocument } from "../packages/ingestion/src/adapters/types.js";
 import { ingestFile } from "../packages/ingestion/src/adapters/files.js";
 import { DraftStore } from "../packages/ingestion/src/admin/drafts.js";
+import { prepareRelease, publishRelease, type ReleaseDocument } from "../packages/ingestion/src/pipeline/release.js";
+import { KnowledgeManifestSchema, parsePublicKnowledge, type KnowledgeManifest } from "@isb/knowledge/schema";
 
 const require = createRequire(import.meta.url);
 const robotsParser = require("robots-parser") as (url: string, contents: string) => { isAllowed(url: string, userAgent?: string): boolean | undefined };
@@ -87,6 +89,52 @@ export async function crawlPublicSources(sources: SourceDefinition[]): Promise<A
   return collected;
 }
 
+async function readJsonIfPresent(path: string): Promise<unknown | undefined> {
+  try { return JSON.parse(await readFile(path, "utf8")); }
+  catch (error) { if ((error as NodeJS.ErrnoException).code === "ENOENT") return undefined; throw error; }
+}
+
+async function publishFromWorkspace(paths: IngestPaths, sources: SourceDefinition[], store: DraftStore) {
+  const now = new Date();
+  const existingRaw = await readJsonIfPresent(join(paths.knowledge, "items.json"));
+  const manifestRaw = await readJsonIfPresent(join(paths.knowledge, "manifest.json"));
+  const existingItems = existingRaw ? parsePublicKnowledge(existingRaw) : [];
+  const manifest: KnowledgeManifest = manifestRaw ? KnowledgeManifestSchema.parse(manifestRaw) : {
+    schemaVersion: 1, indexVersion: "empty", generatedAt: now.toISOString(), itemCount: 0, sourceFreshness: []
+  };
+  const crawlPath = join(paths.drafts, "crawl", "latest.json");
+  const crawl = (await readJsonIfPresent(crawlPath) ?? []) as Array<{ sourceId: string; document: RawDocument }>;
+  const sourceMap = new Map(sources.map((source) => [source.id, source]));
+  const releaseDocuments: ReleaseDocument[] = crawl.map((entry) => ({
+    sourceId: entry.sourceId,
+    category: sourceMap.get(entry.sourceId)?.categories[0] ?? "policies",
+    sourceType: "official-web",
+    reviewStatus: "auto-published",
+    document: entry.document
+  }));
+  const approved = (await store.list()).filter((draft) => draft.state === "approved");
+  for (const draft of approved) releaseDocuments.push({
+    sourceId: `upload-${draft.id}`,
+    category: draft.categories[0] ?? "forms",
+    sourceType: "official-document",
+    reviewStatus: "approved",
+    document: {
+      canonicalUrl: draft.sourceUrl ?? "https://www.isb.cn/",
+      title: draft.sourceName,
+      language: /[\u3400-\u9fff]/u.test(draft.text) ? "zh" : "en",
+      text: draft.text,
+      fetchedAt: draft.createdAt,
+      attachments: []
+    }
+  });
+  if (releaseDocuments.length === 0) throw new Error("No crawled or approved documents to publish");
+  const candidate = prepareRelease({ documents: releaseDocuments, existingItems, manifest, now });
+  const summary = await publishRelease(candidate, paths.knowledge);
+  for (const draft of approved) await store.markPublished(draft.id);
+  await rm(crawlPath, { force: true });
+  return { ...summary, blockedItems: candidate.blockedItems.length, conflicts: candidate.conflicts.length };
+}
+
 export async function runIngestCli(args: string[], deps: CliDeps): Promise<CliResult> {
   try {
     if (args.length === 0 || args[0] === "--help" || args[0] === "help") return { exitCode: 0, output: help };
@@ -103,8 +151,9 @@ export async function runIngestCli(args: string[], deps: CliDeps): Promise<CliRe
       if (requested && selected.length === 0) return jsonResult(2, { ok: false, error: `Unknown source: ${requested}` });
       if (args.includes("--dry-run")) return jsonResult(0, { ok: true, dryRun: true, sourceIds: selected.map((source) => source.id) });
       const result = await (deps.crawl ?? crawlPublicSources)(selected);
-      await mkdir(deps.paths.drafts, { recursive: true });
-      await writeFile(resolve(deps.paths.drafts, "crawl-latest.json"), `${JSON.stringify(result, null, 2)}\n`, "utf8");
+      const crawlDir = resolve(deps.paths.drafts, "crawl");
+      await mkdir(crawlDir, { recursive: true });
+      await writeFile(resolve(crawlDir, "latest.json"), `${JSON.stringify(result, null, 2)}\n`, "utf8");
       return jsonResult(0, { ok: true, dryRun: false, sourceIds: selected.map((source) => source.id) });
     }
     if (args[0] === "upload" && args[1]) {
@@ -118,7 +167,7 @@ export async function runIngestCli(args: string[], deps: CliDeps): Promise<CliRe
       const drafts = await actions.list!();
       const approved = drafts.filter((draft) => draft.state === "approved");
       if (approved.length === 0) return jsonResult(2, { ok: false, error: "No approved drafts to publish" });
-      const result = await deps.publish?.(approved);
+      const result = deps.publish ? await deps.publish(approved) : await publishFromWorkspace(deps.paths, sources, store);
       return jsonResult(0, { ok: true, published: approved.length, result });
     }
     if (args[0] === "withdraw" && args[1]) {

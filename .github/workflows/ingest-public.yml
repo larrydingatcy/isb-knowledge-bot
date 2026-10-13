@@ -1,0 +1,67 @@
+name: Ingest public ISB sources
+
+on:
+  schedule:
+    - cron: "17 1 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: isb-public-ingestion
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Validate source registry and tests
+        run: |
+          pnpm ingest source validate
+          pnpm vitest run packages/ingestion
+      - name: Crawl and publish candidate
+        id: ingestion
+        shell: bash
+        run: |
+          set +e
+          pnpm ingest crawl
+          crawl_status=$?
+          if [ "$crawl_status" -eq 0 ]; then
+            pnpm ingest publish
+            publish_status=$?
+          else
+            publish_status=1
+          fi
+          changed=0
+          if ! git diff --quiet -- data/knowledge; then changed=1; fi
+          blocked=0
+          if [ -f data/knowledge/status.json ]; then
+            blocked=$(node -e 'const s=require("./data/knowledge/status.json"); process.stdout.write(String(s.blockedCount||0))')
+          fi
+          failed=0
+          if [ "$crawl_status" -ne 0 ] || [ "$publish_status" -ne 0 ]; then failed=1; fi
+          pnpm tsx scripts/write-ingestion-summary.ts --changed-items "$changed" --failed-sources "$failed" --blocked-items "$blocked" --stale-sources 0
+          if [ "$failed" -ne 0 ]; then exit 1; fi
+      - name: Commit validated knowledge only
+        if: steps.ingestion.outputs.should_commit == 'true'
+        run: |
+          git config user.name "isb-knowledge-bot"
+          git config user.email "isb-knowledge-bot@users.noreply.github.com"
+          git add data/knowledge
+          git commit -m "chore: refresh ISB public knowledge"
+          git push
+      - name: Upload ingestion diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ingestion-summary
+          path: artifacts/ingestion-summary.json
+          if-no-files-found: error

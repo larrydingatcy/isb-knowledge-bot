@@ -9,7 +9,7 @@ import { normalizeText, sha256 } from "./normalize.js";
 import { findPii } from "./pii.js";
 import { assertDocumentQuality } from "./quality.js";
 
-export interface ReleaseDocument { sourceId: string; category: string; document: RawDocument }
+export interface ReleaseDocument { sourceId: string; category: string; sourceType?: KnowledgeItem["sourceType"]; reviewStatus?: KnowledgeItem["reviewStatus"]; document: RawDocument }
 export interface ReleaseInput {
   documents: ReleaseDocument[];
   existingItems: KnowledgeItem[];
@@ -46,7 +46,7 @@ function toKnowledge(entry: ReleaseDocument, now: Date): KnowledgeItem {
     tags: [entry.category, entry.sourceId],
     sourceId: entry.sourceId,
     sourceUrl: entry.document.canonicalUrl,
-    sourceType: "official-web",
+    sourceType: entry.sourceType ?? "official-web",
     publishedAt: new Date(date).toISOString(),
     validFrom: now.toISOString(),
     validUntil: validUntil.toISOString(),
@@ -54,7 +54,7 @@ function toKnowledge(entry: ReleaseDocument, now: Date): KnowledgeItem {
     contentHash,
     upstreamVersion: contentHash.slice(0, 16),
     visibility: "public",
-    reviewStatus: "auto-published",
+    reviewStatus: entry.reviewStatus ?? "auto-published",
     confidence: 0.9,
     warnings: []
   };
