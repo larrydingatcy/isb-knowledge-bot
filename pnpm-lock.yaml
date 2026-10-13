@@ -118,6 +118,9 @@ importers:
 
   packages/ingestion:
     dependencies:
+      '@isb/knowledge':
+        specifier: workspace:*
+        version: link:../knowledge
       '@mozilla/readability':
         specifier: ^0.6.0
         version: 0.6.0

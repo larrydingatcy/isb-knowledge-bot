@@ -9,6 +9,7 @@
     "./safe-url": "./src/config/safe-url.ts"
   },
   "dependencies": {
+    "@isb/knowledge": "workspace:*",
     "@mozilla/readability": "^0.6.0",
     "cheerio": "^1.1.2",
     "ipaddr.js": "^2.2.0",
