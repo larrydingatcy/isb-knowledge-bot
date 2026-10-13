@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "indexVersion": "c5fcbc671d8e1461",
-  "generatedAt": "2026-10-13T07:51:41.919Z",
+  "generatedAt": "2026-10-13T07:55:22.260Z",
   "itemCount": 5,
   "sourceFreshness": [
     {
       "sourceId": "isb-activities",
-      "lastSuccessfulAt": "2026-10-13T07:51:41.919Z",
+      "lastSuccessfulAt": "2026-10-13T07:55:22.260Z",
       "status": "current"
     },
     {
       "sourceId": "isb-calendar",
-      "lastSuccessfulAt": "2026-10-13T07:51:41.919Z",
+      "lastSuccessfulAt": "2026-10-13T07:55:22.260Z",
       "status": "current"
     },
     {
       "sourceId": "isb-public",
-      "lastSuccessfulAt": "2026-10-13T07:51:41.919Z",
+      "lastSuccessfulAt": "2026-10-13T07:55:22.260Z",
       "status": "current"
     },
     {
@@ -26,7 +26,7 @@
     },
     {
       "sourceId": "isb-tuition-fees",
-      "lastSuccessfulAt": "2026-10-13T07:51:41.919Z",
+      "lastSuccessfulAt": "2026-10-13T07:55:22.260Z",
       "status": "current"
     }
   ]
