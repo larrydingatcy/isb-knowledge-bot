@@ -1,0 +1,9 @@
+allowedHosts:
+  - dragonsgate.isb.cn
+startUrls:
+  - https://dragonsgate.isb.cn/
+receiverUrl: http://127.0.0.1:43117
+schedule:
+  weekday: sunday
+  hour: 9
+  timezone: Asia/Nicosia

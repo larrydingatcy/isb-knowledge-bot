@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "ISB Dragons' Gate Knowledge Sync",
+  "version": "1.0.0",
+  "description": "Captures explicitly allowlisted school information to a loopback-only local reviewer.",
+  "permissions": ["storage", "alarms", "tabs", "scripting", "notifications"],
+  "optional_host_permissions": ["https://dragonsgate.isb.cn/*", "http://127.0.0.1:43117/*"],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [{ "matches": ["https://dragonsgate.isb.cn/*"], "js": ["content.js"], "run_at": "document_idle" }]
+}
