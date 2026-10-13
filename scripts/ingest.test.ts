@@ -1,4 +1,4 @@
-import { mkdtemp, readFile, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { describe, expect, it, vi } from "vitest";
@@ -65,11 +65,19 @@ describe("ingestion CLI", () => {
   it("publishes a completed public crawl without requiring an upload draft", async () => {
     const paths = await workspace();
     const crawlDir = join(paths.drafts, "crawl");
-    await import("node:fs/promises").then(({ mkdir }) => mkdir(crawlDir, { recursive: true }));
-    await writeFile(join(crawlDir, "latest.json"), JSON.stringify([{ sourceId: "isb", document: { canonicalUrl: "https://www.isb.cn/notice", title: "General notice", language: "en", text: "General school notice for all families with important calendar information.", fetchedAt: "2026-10-13T00:00:00.000Z", attachments: [] } }]));
+    await mkdir(crawlDir, { recursive: true });
+    const captured = [{ sourceId: "isb", document: { canonicalUrl: "https://www.isb.cn/notice", title: "General notice", language: "en", text: "General school notice for all families with important calendar information.", fetchedAt: "2026-10-13T00:00:00.000Z", attachments: [] } }];
+    await writeFile(join(crawlDir, "latest.json"), JSON.stringify(captured));
     const result = await runIngestCli(["publish"], { paths });
     expect(result.exitCode).toBe(0);
     expect(JSON.parse(await readFile(join(paths.knowledge, "items.json"), "utf8"))).toHaveLength(1);
+    const before = await Promise.all([readFile(join(paths.knowledge, "items.json"), "utf8"), readFile(join(paths.knowledge, "manifest.json"), "utf8")]);
+    await mkdir(crawlDir, { recursive: true });
+    await writeFile(join(crawlDir, "latest.json"), JSON.stringify(captured));
+    const repeated = await runIngestCli(["publish"], { paths });
+    const after = await Promise.all([readFile(join(paths.knowledge, "items.json"), "utf8"), readFile(join(paths.knowledge, "manifest.json"), "utf8")]);
+    expect(JSON.parse(repeated.json!).result).toMatchObject({ noChange: true });
+    expect(after).toEqual(before);
   });
 
   it("requires confirmation before withdrawal", async () => {

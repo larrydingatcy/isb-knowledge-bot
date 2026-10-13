@@ -129,6 +129,15 @@ async function publishFromWorkspace(paths: IngestPaths, sources: SourceDefinitio
   });
   if (releaseDocuments.length === 0) throw new Error("No crawled or approved documents to publish");
   const candidate = prepareRelease({ documents: releaseDocuments, existingItems, manifest, now });
+  const publicFingerprint = (items: typeof existingItems) => JSON.stringify(items.map((item) => ({
+    id: item.id, title: item.title, content: item.content, language: item.language, category: item.category,
+    tags: item.tags, sourceId: item.sourceId, sourceUrl: item.sourceUrl, sourceType: item.sourceType,
+    contentHash: item.contentHash, reviewStatus: item.reviewStatus, warnings: item.warnings
+  })).sort((left, right) => left.id.localeCompare(right.id)));
+  if (approved.length === 0 && candidate.blockedItems.length === 0 && candidate.conflicts.length === 0 && publicFingerprint(candidate.publicItems) === publicFingerprint(existingItems)) {
+    await rm(crawlPath, { force: true });
+    return { itemCount: existingItems.length, indexVersion: manifest.indexVersion, blockedItems: 0, conflicts: 0, noChange: true };
+  }
   const summary = await publishRelease(candidate, paths.knowledge);
   for (const draft of approved) await store.markPublished(draft.id);
   await rm(crawlPath, { force: true });
