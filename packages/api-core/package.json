@@ -1,0 +1,19 @@
+{
+  "name": "@isb/api-core",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/handler.ts",
+    "./cors": "./src/cors.ts",
+    "./rate-limit": "./src/rate-limit.ts",
+    "./request": "./src/request.ts"
+  },
+  "dependencies": {
+    "@isb/answering": "workspace:*",
+    "@isb/knowledge": "workspace:*",
+    "@upstash/ratelimit": "^2.2.0",
+    "@upstash/redis": "^1.39.0",
+    "zod": "^4.1.0"
+  }
+}
