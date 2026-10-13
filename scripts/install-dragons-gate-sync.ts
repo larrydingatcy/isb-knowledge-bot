@@ -1,0 +1,28 @@
+import { randomBytes } from "node:crypto";
+import { chmod, mkdir, readFile, writeFile } from "node:fs/promises";
+import { homedir } from "node:os";
+import { join, resolve } from "node:path";
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
+
+const execFileAsync = promisify(execFile);
+const extensionId = process.argv[2];
+if (!extensionId || !/^[a-p]{32}$/.test(extensionId)) throw new Error("Usage: pnpm tsx scripts/install-dragons-gate-sync.ts <32-character-extension-id>");
+const root = process.cwd();
+const support = join(homedir(), "Library", "Application Support", "ISBKnowledge");
+const launchAgents = join(homedir(), "Library", "LaunchAgents");
+const configPath = join(support, "dragons-gate.json");
+const plistPath = join(launchAgents, "com.isb.dragons-gate-receiver.plist");
+await mkdir(support, { recursive: true, mode: 0o700 });
+await mkdir(launchAgents, { recursive: true });
+await execFileAsync("pnpm", ["--filter", "@isb/dg-extension", "build"], { cwd: root });
+await writeFile(configPath, `${JSON.stringify({ token: randomBytes(32).toString("base64url"), extensionId, captureRoot: join(root, "data/private/dragons-gate"), port: 43117 }, null, 2)}\n`, { mode: 0o600 });
+await chmod(configPath, 0o600);
+const template = await readFile(resolve(root, "local/dragons-gate/launchd/com.isb.dragons-gate-receiver.plist.template"), "utf8");
+const pnpm = (await execFileAsync("which", ["pnpm"])).stdout.trim();
+const replacements: Record<string, string> = { __PNPM__: pnpm, __START__: resolve(root, "local/dragons-gate/receiver/src/start.ts"), __CONFIG__: configPath, __WORKDIR__: root, __LOG__: join(support, "receiver.log") };
+const plist = Object.entries(replacements).reduce((value, [key, replacement]) => value.replaceAll(key, replacement), template);
+await writeFile(plistPath, plist, "utf8");
+await execFileAsync("launchctl", ["bootout", `gui/${process.getuid?.() ?? 0}`, plistPath]).catch(() => undefined);
+await execFileAsync("launchctl", ["bootstrap", `gui/${process.getuid?.() ?? 0}`, plistPath]);
+console.log(JSON.stringify({ installed: true, extensionPath: resolve(root, "local/dragons-gate/extension/dist"), configPath, plistPath }));

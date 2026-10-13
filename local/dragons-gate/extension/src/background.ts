@@ -3,6 +3,28 @@ import { withNavigationTimeout } from "./capture.js";
 const START_URLS = ["https://dragonsgate.isb.cn/"];
 const RECEIVER = "http://127.0.0.1:43117";
 
+function nextSundayAtNine(): number {
+  const next = new Date();
+  const days = (7 - next.getDay()) % 7;
+  next.setDate(next.getDate() + days);
+  next.setHours(9, 0, 0, 0);
+  if (next.getTime() <= Date.now()) next.setDate(next.getDate() + 7);
+  return next.getTime();
+}
+
+async function scheduledSync(): Promise<void> {
+  try { await syncNow(); }
+  catch (error) {
+    await chrome.storage.local.set({ lastRunStatus: "failed", lastFailure: error instanceof Error ? error.message : String(error) });
+    await chrome.notifications.create({ type: "basic", iconUrl: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='128' height='128'%3E%3Crect width='128' height='128' rx='64' fill='%230b2b4c'/%3E%3Ctext x='64' y='78' text-anchor='middle' font-size='42' fill='white'%3EISB%3C/text%3E%3C/svg%3E", title: "ISB sync needs attention", message: error instanceof Error ? error.message : String(error) });
+  }
+}
+
+async function catchUpIfMissed(): Promise<void> {
+  const { lastRunAt, connectorToken } = await chrome.storage.local.get(["lastRunAt", "connectorToken"]);
+  if (typeof connectorToken === "string" && typeof lastRunAt === "string" && Date.now() - new Date(lastRunAt).getTime() > 7 * 24 * 60 * 60 * 1000) await scheduledSync();
+}
+
 async function waitForComplete(tabId: number): Promise<void> {
   return withNavigationTimeout(new Promise((resolve) => {
     const listener = (changedId: number, info: chrome.tabs.OnUpdatedInfo) => {
@@ -34,8 +56,9 @@ export async function syncNow(): Promise<{ captured: number }> {
   return { captured };
 }
 
-chrome.runtime.onInstalled.addListener(() => { void chrome.alarms.create("weekly-sync", { periodInMinutes: 7 * 24 * 60 }); });
-chrome.alarms.onAlarm.addListener((alarm) => { if (alarm.name === "weekly-sync") void syncNow(); });
+chrome.runtime.onInstalled.addListener(() => { void chrome.alarms.create("weekly-sync", { when: nextSundayAtNine(), periodInMinutes: 7 * 24 * 60 }); });
+chrome.runtime.onStartup.addListener(() => { void catchUpIfMissed(); });
+chrome.alarms.onAlarm.addListener((alarm) => { if (alarm.name === "weekly-sync") void scheduledSync(); });
 chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
   if (message?.type !== "sync-now") return false;
   void syncNow().then((result) => sendResponse({ ok: true, ...result }), (error) => sendResponse({ ok: false, error: error instanceof Error ? error.message : String(error) }));
