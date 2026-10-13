@@ -1,0 +1,16 @@
+{
+  "name": "@isb/ingestion",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./config": "./src/config/schema.ts",
+    "./load": "./src/config/load.ts",
+    "./safe-url": "./src/config/safe-url.ts"
+  },
+  "dependencies": {
+    "ipaddr.js": "^2.2.0",
+    "yaml": "^2.8.1",
+    "zod": "^4.1.0"
+  }
+}

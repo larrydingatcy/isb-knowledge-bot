@@ -1,0 +1,15 @@
+- id: isb-public
+  name: International School of Beijing public website
+  baseUrl: https://www.isb.cn/
+  startUrls:
+    - https://www.isb.cn/
+  allowedHosts:
+    - www.isb.cn
+    - isb.cn
+  adapter: html
+  languages: [en, zh]
+  categories: [calendar, activities, dining, transport, forms, policies]
+  crawlIntervalHours: 24
+  maxPages: 100
+  requestDelayMs: 750
+  visibilityPolicy: public
