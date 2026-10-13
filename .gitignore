@@ -10,3 +10,5 @@ coverage/
 apps/web/public/knowledge/
 playwright-report/
 test-results/
+data/drafts/
+data/private/
