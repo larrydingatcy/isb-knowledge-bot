@@ -11,6 +11,7 @@
     "build": "pnpm build:index && pnpm --filter @isb/web build",
     "build:index": "tsx scripts/build-index.ts",
     "e2e": "playwright test",
+    "ingest": "tsx scripts/ingest.ts",
     "test": "vitest run",
     "typecheck": "tsc --noEmit && tsc -p apps/web/tsconfig.json --noEmit",
     "lint": "eslint ."
@@ -29,6 +30,7 @@
   "dependencies": {
     "@isb/answering": "workspace:*",
     "@isb/api-core": "workspace:*",
-    "@isb/knowledge": "workspace:*"
+    "@isb/knowledge": "workspace:*",
+    "robots-parser": "^3.0.1"
   }
 }

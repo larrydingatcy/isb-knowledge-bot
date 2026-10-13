@@ -1,0 +1,142 @@
+import { writeFile, mkdir } from "node:fs/promises";
+import { basename, resolve } from "node:path";
+import { isIP } from "node:net";
+import { promises as dns } from "node:dns";
+import { pathToFileURL } from "node:url";
+import { createRequire } from "node:module";
+import { loadSources } from "../packages/ingestion/src/config/load.js";
+import { assertSafeSourceUrl } from "../packages/ingestion/src/config/safe-url.js";
+import type { SourceDefinition } from "../packages/ingestion/src/config/schema.js";
+import { createAdapter } from "../packages/ingestion/src/adapters/registry.js";
+import type { RawDocument } from "../packages/ingestion/src/adapters/types.js";
+import { ingestFile } from "../packages/ingestion/src/adapters/files.js";
+import { DraftStore } from "../packages/ingestion/src/admin/drafts.js";
+
+const require = createRequire(import.meta.url);
+const robotsParser = require("robots-parser") as (url: string, contents: string) => { isAllowed(url: string, userAgent?: string): boolean | undefined };
+
+export interface IngestPaths { config: string; drafts: string; knowledge: string }
+interface CliResult { exitCode: number; output: string; json?: string }
+interface DraftActions {
+  preview?: (id: string) => Promise<unknown>;
+  approve?: (id: string, options?: { redactionAcknowledged?: boolean; redactedText?: string }) => Promise<unknown>;
+  withdraw?: (id: string) => Promise<unknown>;
+  list?: () => Promise<Array<{ id: string; state: string }>>;
+}
+interface CliDeps {
+  paths: IngestPaths;
+  crawl?: (sources: SourceDefinition[]) => Promise<unknown>;
+  publish?: (drafts: Array<{ id: string; state: string }>) => Promise<unknown>;
+  draftActions?: DraftActions;
+  confirm?: (message: string) => Promise<boolean>;
+}
+
+const help = `Usage:
+  pnpm ingest crawl [source-id] [--dry-run]
+  pnpm ingest source validate
+  pnpm ingest upload <path>
+  pnpm ingest draft preview <id>
+  pnpm ingest draft approve <id>
+  pnpm ingest publish
+  pnpm ingest withdraw <id> [--yes]`;
+
+const jsonResult = (exitCode: number, value: object, output = ""): CliResult => ({ exitCode, output: output || JSON.stringify(value), json: JSON.stringify(value) });
+
+async function resolveDns(hostname: string): Promise<string[]> {
+  if (isIP(hostname)) return [hostname];
+  return (await dns.lookup(hostname, { all: true, verbatim: true })).map((entry) => entry.address);
+}
+
+async function guardedFetch(url: URL, source: SourceDefinition) {
+  let current = url;
+  for (let redirects = 0; redirects <= 5; redirects += 1) {
+    await assertSafeSourceUrl(current, source, resolveDns);
+    const response = await fetch(current, { redirect: "manual", headers: { "user-agent": "ISB-Knowledge-Bot/1.0 (+https://github.com/larrydingatcy/isb-knowledge-bot)" } });
+    if (response.status >= 300 && response.status < 400) {
+      const location = response.headers.get("location");
+      if (!location) throw new Error(`Redirect without Location from ${current.href}`);
+      current = new URL(location, current);
+      continue;
+    }
+    const headers: Record<string, string> = {};
+    response.headers.forEach((value, key) => { headers[key] = value; });
+    return { url: response.url || current.href, status: response.status, headers, body: await response.text() };
+  }
+  throw new Error(`Too many redirects from ${url.href}`);
+}
+
+export async function crawlPublicSources(sources: SourceDefinition[]): Promise<Array<{ sourceId: string; document: RawDocument }>> {
+  const collected: Array<{ sourceId: string; document: RawDocument }> = [];
+  for (const source of sources) {
+    const adapter = createAdapter(source.adapter);
+    const robotsUrl = new URL("/robots.txt", source.baseUrl);
+    const robotsResponse = await guardedFetch(robotsUrl, source);
+    const robots = robotsParser(robotsUrl.href, robotsResponse.status === 404 ? "" : robotsResponse.body);
+    const canFetch = async (url: URL) => {
+      await assertSafeSourceUrl(url, source, resolveDns);
+      return robots.isAllowed(url.href, "ISB-Knowledge-Bot") !== false;
+    };
+    for await (const document of adapter.collect({
+      source,
+      fetch: (url) => guardedFetch(url, source),
+      canFetch,
+      delay: (milliseconds) => new Promise((done) => setTimeout(done, milliseconds)),
+      now: () => new Date()
+    })) collected.push({ sourceId: source.id, document });
+  }
+  return collected;
+}
+
+export async function runIngestCli(args: string[], deps: CliDeps): Promise<CliResult> {
+  try {
+    if (args.length === 0 || args[0] === "--help" || args[0] === "help") return { exitCode: 0, output: help };
+    const sources = await loadSources(deps.paths.config);
+    const store = new DraftStore(deps.paths.drafts);
+    const actions: DraftActions = {
+      preview: (id) => store.preview(id), approve: (id, options) => store.approve(id, options),
+      withdraw: (id) => store.withdraw(id), list: () => store.list(), ...deps.draftActions
+    };
+    if (args[0] === "source" && args[1] === "validate") return jsonResult(0, { valid: true, sources: sources.length });
+    if (args[0] === "crawl") {
+      const requested = args[1]?.startsWith("--") ? undefined : args[1];
+      const selected = requested ? sources.filter((source) => source.id === requested) : sources;
+      if (requested && selected.length === 0) return jsonResult(2, { ok: false, error: `Unknown source: ${requested}` });
+      if (args.includes("--dry-run")) return jsonResult(0, { ok: true, dryRun: true, sourceIds: selected.map((source) => source.id) });
+      const result = await (deps.crawl ?? crawlPublicSources)(selected);
+      await mkdir(deps.paths.drafts, { recursive: true });
+      await writeFile(resolve(deps.paths.drafts, "crawl-latest.json"), `${JSON.stringify(result, null, 2)}\n`, "utf8");
+      return jsonResult(0, { ok: true, dryRun: false, sourceIds: selected.map((source) => source.id) });
+    }
+    if (args[0] === "upload" && args[1]) {
+      const draft = await ingestFile(resolve(args[1]), { sourceName: basename(args[1]), categories: ["forms"], visibility: "public" });
+      await store.create(draft);
+      return jsonResult(0, { ok: true, id: draft.id, state: draft.state });
+    }
+    if (args[0] === "draft" && args[1] === "preview" && args[2]) return jsonResult(0, { ok: true, draft: await actions.preview!(args[2]) });
+    if (args[0] === "draft" && args[1] === "approve" && args[2]) return jsonResult(0, { ok: true, draft: await actions.approve!(args[2]) });
+    if (args[0] === "publish") {
+      const drafts = await actions.list!();
+      const approved = drafts.filter((draft) => draft.state === "approved");
+      if (approved.length === 0) return jsonResult(2, { ok: false, error: "No approved drafts to publish" });
+      const result = await deps.publish?.(approved);
+      return jsonResult(0, { ok: true, published: approved.length, result });
+    }
+    if (args[0] === "withdraw" && args[1]) {
+      const confirmed = args.includes("--yes") || await deps.confirm?.(`Withdraw ${args[1]}?`) === true;
+      if (!confirmed) return jsonResult(2, { ok: false, error: "Withdrawal not confirmed" });
+      await actions.withdraw!(args[1]);
+      return jsonResult(0, { ok: true, withdrawn: args[1] });
+    }
+    return jsonResult(2, { ok: false, error: `Unknown command: ${args.join(" ")}` }, help);
+  } catch (error) {
+    return jsonResult(1, { ok: false, error: error instanceof Error ? error.message : String(error) });
+  }
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  const root = process.cwd();
+  const result = await runIngestCli(process.argv.slice(2), { paths: { config: resolve(root, "config/sources.yml"), drafts: resolve(root, "data/drafts"), knowledge: resolve(root, "data/knowledge") } });
+  console.log(result.output);
+  if (result.json && result.output !== result.json) console.log(result.json);
+  process.exitCode = result.exitCode;
+}

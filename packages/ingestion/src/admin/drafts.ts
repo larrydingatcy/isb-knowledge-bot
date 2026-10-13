@@ -27,6 +27,12 @@ export class DraftStore {
     return JSON.parse(await readFile(this.path(id), "utf8")) as DraftDocument;
   }
 
+  async list(): Promise<DraftDocument[]> {
+    await mkdir(this.root, { recursive: true });
+    const names = (await readdir(this.root)).filter((value) => value.endsWith(".json")).sort();
+    return Promise.all(names.map(async (name) => JSON.parse(await readFile(join(this.root, name), "utf8")) as DraftDocument));
+  }
+
   private async transition(id: string, allowed: DraftDocument["state"][], state: DraftDocument["state"], changes: Partial<DraftDocument> = {}): Promise<DraftDocument> {
     const draft = await this.preview(id);
     if (!allowed.includes(draft.state)) throw new Error(`Illegal draft transition: ${draft.state} -> ${state}`);
