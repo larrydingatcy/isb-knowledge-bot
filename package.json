@@ -8,13 +8,16 @@
     "node": ">=22 <25"
   },
   "scripts": {
+    "build": "pnpm build:index && pnpm --filter @isb/web build",
     "build:index": "tsx scripts/build-index.ts",
+    "e2e": "playwright test",
     "test": "vitest run",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc -p apps/web/tsconfig.json --noEmit",
     "lint": "eslint ."
   },
   "devDependencies": {
     "@eslint/js": "^9.39.0",
+    "@playwright/test": "^1.64.0",
     "@types/node": "^24.0.0",
     "@vercel/node": "^23.0.1",
     "eslint": "^9.39.0",
