@@ -7,3 +7,4 @@ coverage/
 .superpowers/
 .vercel/
 .DS_Store
+apps/web/public/knowledge/
