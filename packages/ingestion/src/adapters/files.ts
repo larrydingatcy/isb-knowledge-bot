@@ -61,7 +61,7 @@ export async function ingestFile(path: string, metadata: UploadMetadata, deps: F
   } else if (buffer.subarray(0, 5).toString("ascii") === "%PDF-") {
     mimeType = "application/pdf";
     text = normalizeText(await (deps.parsePdf ?? (async (value) => (await parsePdfBuffer(value)).text))(buffer));
-  } else if (detected?.mime === "application/vnd.openxmlformats-officedocument.wordprocessingml.document" || buffer.subarray(0, 4).equals(Buffer.from([0x50, 0x4b, 0x03, 0x04]))) {
+  } else if (detected?.mime === "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
     mimeType = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
     text = normalizeText(await (deps.parseDocx ?? (async (value) => (await mammoth.extractRawText({ buffer: value })).value))(buffer));
   } else if (!detected) {

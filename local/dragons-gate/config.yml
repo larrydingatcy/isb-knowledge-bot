@@ -1,7 +1,7 @@
 allowedHosts:
-  - dragonsgate.isb.cn
+  - www.isb.cn
 startUrls:
-  - https://dragonsgate.isb.cn/
+  - https://www.isb.cn/dg
 receiverUrl: http://127.0.0.1:43117
 schedule:
   weekday: sunday

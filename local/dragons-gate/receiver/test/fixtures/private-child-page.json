@@ -1,7 +1,7 @@
 {
   "runId": "run-private",
   "nonce": "nonce-private-123",
-  "url": "https://dragonsgate.isb.cn/my-family/schedule?student=private",
+  "url": "https://www.isb.cn/my-family/schedule?student=private",
   "title": "My child schedule",
   "text": "Student name: Example Child. Class 5A schedule and lunch account balance RMB 120. Contact parent@example.invalid.",
   "capturedAt": "2026-10-13T00:00:00.000Z"

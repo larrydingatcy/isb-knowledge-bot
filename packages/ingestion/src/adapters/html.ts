@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { Readability } from "@mozilla/readability";
 import * as cheerio from "cheerio";
-import { JSDOM } from "jsdom";
+import { JSDOM, VirtualConsole } from "jsdom";
 import type { AdapterContext, RawDocument, SourceAdapter } from "./types.js";
 
 function contentType(response: { headers: Record<string, string | undefined> }): string {
@@ -11,7 +11,7 @@ function contentType(response: { headers: Record<string, string | undefined> }):
 export function parseHtmlDocument(html: string, responseUrl: string, fetchedAt: string): RawDocument {
   const $ = cheerio.load(html);
   const canonical = $("link[rel='canonical']").attr("href") || responseUrl;
-  const dom = new JSDOM(html, { url: responseUrl });
+  const dom = new JSDOM(html, { url: responseUrl, virtualConsole: new VirtualConsole() });
   const article = new Readability(dom.window.document).parse();
   const text = article?.textContent?.replace(/\s+/g, " ").trim() || $("main").text().replace(/\s+/g, " ").trim();
   const language = ($("html").attr("lang") || "en").toLowerCase().startsWith("zh") ? "zh" : "en";

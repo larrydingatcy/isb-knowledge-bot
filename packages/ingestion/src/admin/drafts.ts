@@ -1,6 +1,7 @@
 import { appendFile, mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import type { DraftDocument } from "../adapters/files.js";
+import { sha256 } from "../pipeline/normalize.js";
 
 export class DraftStore {
   constructor(private readonly root: string) {}
@@ -8,7 +9,7 @@ export class DraftStore {
   private path(id: string): string { return join(this.root, `${id}.json`); }
 
   private async audit(action: string, draft: DraftDocument): Promise<void> {
-    const record = { at: new Date().toISOString(), action, id: draft.id, contentHash: draft.contentHash, state: draft.state, sourceName: draft.sourceName };
+    const record = { at: new Date().toISOString(), action, id: draft.id, contentHash: draft.contentHash, state: draft.state, sourceNameHash: sha256(draft.sourceName) };
     await appendFile(join(this.root, "audit.ndjson"), `${JSON.stringify(record)}\n`, "utf8");
   }
 
@@ -46,7 +47,7 @@ export class DraftStore {
     const draft = await this.preview(id);
     if (draft.state === "blocked") {
       if (!options.redactionAcknowledged || !options.redactedText) throw new Error("Redaction acknowledgment and sanitized text are required");
-      return this.transition(id, ["blocked"], "approved", { text: options.redactedText, findings: [] });
+      return this.transition(id, ["blocked"], "approved", { text: options.redactedText, contentHash: sha256(options.redactedText), findings: [] });
     }
     return this.transition(id, ["draft"], "approved");
   }

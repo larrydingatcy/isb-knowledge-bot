@@ -1,4 +1,4 @@
-import { readFile, readdir, writeFile, mkdir } from "node:fs/promises";
+import { readFile, readdir, writeFile, mkdir, rm } from "node:fs/promises";
 import { join } from "node:path";
 import type { RawDocument } from "../../../../packages/ingestion/src/adapters/types.js";
 import { normalizeText, sha256 } from "../../../../packages/ingestion/src/pipeline/normalize.js";
@@ -50,7 +50,8 @@ export function processCaptures(captures: CaptureRecord[], policy: DragonsGatePo
 export async function processCaptureRun(runId: string, policy: DragonsGatePolicy, options: { captureRoot: string; previewRoot: string }): Promise<ProcessSummary> {
   const runDir = join(options.captureRoot, runId);
   const captures: CaptureRecord[] = [];
-  for (const name of (await readdir(runDir)).filter((value) => value.startsWith("capture-") && value.endsWith(".json")).sort()) captures.push(JSON.parse(await readFile(join(runDir, name), "utf8")) as CaptureRecord);
+  const captureNames = (await readdir(runDir)).filter((value) => value.startsWith("capture-") && value.endsWith(".json")).sort();
+  for (const name of captureNames) captures.push(JSON.parse(await readFile(join(runDir, name), "utf8")) as CaptureRecord);
   const summary = processCaptures(captures, policy);
   await mkdir(options.previewRoot, { recursive: true, mode: 0o700 });
   for (const candidate of summary.reviewRequired) {
@@ -58,5 +59,6 @@ export async function processCaptureRun(runId: string, policy: DragonsGatePolicy
     await writeFile(path, `${JSON.stringify({ title: candidate.document.title, sourceUrl: candidate.document.canonicalUrl, text: candidate.document.text, reasons: candidate.reasons }, null, 2)}\n`, { mode: 0o600 });
     summary.previewPaths.push(path);
   }
+  await Promise.all(captureNames.map((name) => rm(join(runDir, name), { force: true })));
   return summary;
 }

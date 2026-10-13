@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@types/jsdom": "^27.0.0",
-    "@types/pdf-parse": "^1.1.5"
+    "@types/pdf-parse": "^1.1.5",
+    "jszip": "^3.10.1"
   }
 }

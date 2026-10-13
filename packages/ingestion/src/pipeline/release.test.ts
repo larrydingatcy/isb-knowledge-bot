@@ -53,6 +53,13 @@ describe("release preparation", () => {
     expect(candidate.blockedItems).toHaveLength(1);
   });
 
+  it("keeps the last known good item when every replacement is PII-blocked", () => {
+    const old = prepareRelease(input([raw()])).publicItems[0]!;
+    const candidate = prepareRelease({ ...input([raw({ text: "Contact parent@example.com about this notice." })]), existingItems: [old] });
+    expect(candidate.blockedItems).toHaveLength(1);
+    expect(candidate.publicItems).toEqual([old]);
+  });
+
   it.each(["", "Sign in Username Password Forgot password"]) ("rejects empty or login-shell output", (text) => {
     expect(() => prepareRelease(input([raw({ text })]))).toThrow(/quality/i);
   });

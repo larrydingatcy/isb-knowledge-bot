@@ -1,13 +1,16 @@
 import { withNavigationTimeout } from "./capture.js";
+import { dgConfig } from "./config.js";
 
-const START_URLS = ["https://dragonsgate.isb.cn/"];
-const RECEIVER = "http://127.0.0.1:43117";
+const START_URLS = dgConfig.startUrls;
+const RECEIVER = dgConfig.receiverUrl;
 
 function nextSundayAtNine(): number {
   const next = new Date();
-  const days = (7 - next.getDay()) % 7;
+  const targetDay = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"].indexOf(dgConfig.schedule.weekday.toLowerCase());
+  if (targetDay < 0) throw new Error(`Unsupported schedule weekday: ${dgConfig.schedule.weekday}`);
+  const days = (7 + targetDay - next.getDay()) % 7;
   next.setDate(next.getDate() + days);
-  next.setHours(9, 0, 0, 0);
+  next.setHours(dgConfig.schedule.hour, 0, 0, 0);
   if (next.getTime() <= Date.now()) next.setDate(next.getDate() + 7);
   return next.getTime();
 }
@@ -43,8 +46,8 @@ export async function syncNow(): Promise<{ captured: number }> {
     const tab = await chrome.tabs.create({ url, active: false });
     if (tab.id === undefined) throw new Error("Chrome did not create a capture tab");
     try {
-      await waitForComplete(tab.id);
-      const result = await chrome.tabs.sendMessage(tab.id, { type: "extract-capture", context: { runId, nonce: crypto.randomUUID(), capturedAt: new Date().toISOString(), allowedHosts: ["dragonsgate.isb.cn"], maxTextLength: 1_500_000 } });
+      if (tab.status !== "complete") await waitForComplete(tab.id);
+      const result = await chrome.tabs.sendMessage(tab.id, { type: "extract-capture", context: { runId, nonce: crypto.randomUUID(), capturedAt: new Date().toISOString(), allowedHosts: dgConfig.allowedHosts, maxTextLength: 1_500_000 } });
       if (!result?.ok) throw new Error(result?.error || "Capture failed");
       const response = await fetch(`${RECEIVER}/v1/captures`, { method: "POST", headers: { authorization: `Bearer ${connectorToken}`, "content-type": "application/json" }, body: JSON.stringify(result.capture) });
       if (!response.ok) throw new Error(`Receiver rejected capture (${response.status})`);

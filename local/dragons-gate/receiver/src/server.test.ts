@@ -7,7 +7,7 @@ import { createReceiver } from "./server.js";
 
 const token = "t".repeat(48);
 const extensionId = "abcdefghijklmnopabcdefghijklmnop";
-const payload = { runId: "run-1", nonce: "nonce-12345678", url: "https://dragonsgate.isb.cn/general", title: "General notice", text: "General school information for all families.", capturedAt: "2026-10-13T00:00:00.000Z" };
+const payload = { runId: "run-1", nonce: "nonce-12345678", url: "https://www.isb.cn/general", title: "General notice", text: "General school information for all families.", capturedAt: "2026-10-13T00:00:00.000Z" };
 
 async function setup() {
   const root = await mkdtemp(join(tmpdir(), "dg-receiver-"));
@@ -26,7 +26,7 @@ describe("loopback receiver", () => {
     [Object.fromEntries(Object.entries(headers).filter(([key]) => key !== "authorization")), "missing token"],
     [{ ...headers, authorization: "Bearer wrong" }, "wrong token"],
     [{ ...headers, origin: "chrome-extension://wrong" }, "wrong extension"],
-    [{ ...headers, origin: "https://dragonsgate.isb.cn" }, "browser page origin"],
+    [{ ...headers, origin: "https://www.isb.cn" }, "browser page origin"],
     [{ ...headers, host: "evil.example" }, "wrong host"]
   ])("rejects %s (%s)", async (requestHeaders) => {
     const { app } = await setup();

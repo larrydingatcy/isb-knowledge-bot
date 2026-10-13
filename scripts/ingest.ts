@@ -166,7 +166,7 @@ export async function runIngestCli(args: string[], deps: CliDeps): Promise<CliRe
     if (args[0] === "publish") {
       const drafts = await actions.list!();
       const approved = drafts.filter((draft) => draft.state === "approved");
-      if (approved.length === 0) return jsonResult(2, { ok: false, error: "No approved drafts to publish" });
+      if (approved.length === 0 && deps.publish) return jsonResult(2, { ok: false, error: "No approved drafts to publish" });
       const result = deps.publish ? await deps.publish(approved) : await publishFromWorkspace(deps.paths, sources, store);
       return jsonResult(0, { ok: true, published: approved.length, result });
     }

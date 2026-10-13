@@ -1,15 +1,51 @@
 - id: isb-public
   name: International School of Beijing public website
   baseUrl: https://www.isb.cn/
-  startUrls:
-    - https://www.isb.cn/
-  allowedHosts:
-    - www.isb.cn
-    - isb.cn
+  startUrls: [https://www.isb.cn/]
+  allowedHosts: [www.isb.cn, isb.cn]
   adapter: html
   languages: [en, zh]
-  categories: [calendar, activities, dining, transport, forms, policies]
+  categories: [policies]
   crawlIntervalHours: 24
-  maxPages: 100
+  maxPages: 1
+  requestDelayMs: 750
+  visibilityPolicy: public
+
+- id: isb-activities
+  name: ISB official activities page
+  baseUrl: https://www.isb.cn/
+  startUrls: [https://www.isb.cn/co-curricular/activities]
+  allowedHosts: [www.isb.cn, isb.cn]
+  adapter: html
+  languages: [en, zh]
+  categories: [activities]
+  crawlIntervalHours: 24
+  maxPages: 1
+  requestDelayMs: 750
+  visibilityPolicy: public
+
+- id: isb-calendar
+  name: ISB official calendar page
+  baseUrl: https://www.isb.cn/
+  startUrls: [https://www.isb.cn/news-medianews/calendar]
+  allowedHosts: [www.isb.cn, isb.cn]
+  adapter: html
+  languages: [en, zh]
+  categories: [calendar]
+  crawlIntervalHours: 24
+  maxPages: 1
+  requestDelayMs: 750
+  visibilityPolicy: public
+
+- id: isb-tuition-fees
+  name: ISB official tuition and fees page
+  baseUrl: https://www.isb.cn/
+  startUrls: [https://www.isb.cn/admissions/tuition-fees]
+  allowedHosts: [www.isb.cn, isb.cn]
+  adapter: html
+  languages: [en, zh]
+  categories: [forms]
+  crawlIntervalHours: 24
+  maxPages: 1
   requestDelayMs: 750
   visibilityPolicy: public

@@ -64,6 +64,7 @@ export function prepareRelease(input: ReleaseInput): ReleaseCandidate {
   const failures = input.sourceFailures ?? [];
   const failed = new Set(failures.map((failure) => failure.sourceId));
   const successful = new Set(input.documents.map((entry) => entry.sourceId));
+  const accepted = new Set<string>();
   const blockedItems: BlockedItem[] = [];
   const fresh: KnowledgeItem[] = [];
 
@@ -75,13 +76,16 @@ export function prepareRelease(input: ReleaseInput): ReleaseCandidate {
       continue;
     }
     fresh.push(toKnowledge(entry, input.now));
+    accepted.add(entry.sourceId);
   }
 
-  const preserved = input.existingItems.filter((item) => failed.has(item.sourceId) || !successful.has(item.sourceId));
+  const preserved = input.existingItems.filter((item) => failed.has(item.sourceId) || !accepted.has(item.sourceId));
   const deduplicated = deduplicateItems([...preserved, ...fresh]);
   const tagged = tagConflicts(deduplicated);
   const priorFreshness = new Map(input.manifest.sourceFreshness.map((value) => [value.sourceId, value]));
-  for (const sourceId of successful) priorFreshness.set(sourceId, { sourceId, lastSuccessfulAt: input.now.toISOString(), status: "current" });
+  for (const sourceId of successful) {
+    if (accepted.has(sourceId)) priorFreshness.set(sourceId, { sourceId, lastSuccessfulAt: input.now.toISOString(), status: "current" });
+  }
   for (const failure of failures) {
     const old = priorFreshness.get(failure.sourceId);
     priorFreshness.set(failure.sourceId, { sourceId: failure.sourceId, lastSuccessfulAt: old?.lastSuccessfulAt ?? input.now.toISOString(), status: "failed" });
@@ -128,11 +132,11 @@ export async function publishRelease(candidate: ReleaseCandidate, targetDir: str
     }
     try {
       await rename(temporary, targetDir);
-      if (backedUp) await rm(backup, { recursive: true, force: true });
     } catch (error) {
       if (backedUp) await rename(backup, targetDir);
       throw error;
     }
+    if (backedUp) await rm(backup, { recursive: true, force: true }).catch(() => undefined);
   } finally {
     await rm(temporary, { recursive: true, force: true });
   }

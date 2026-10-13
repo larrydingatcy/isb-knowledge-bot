@@ -62,6 +62,16 @@ describe("ingestion CLI", () => {
     expect(blocked.exitCode).toBe(2);
   });
 
+  it("publishes a completed public crawl without requiring an upload draft", async () => {
+    const paths = await workspace();
+    const crawlDir = join(paths.drafts, "crawl");
+    await import("node:fs/promises").then(({ mkdir }) => mkdir(crawlDir, { recursive: true }));
+    await writeFile(join(crawlDir, "latest.json"), JSON.stringify([{ sourceId: "isb", document: { canonicalUrl: "https://www.isb.cn/notice", title: "General notice", language: "en", text: "General school notice for all families with important calendar information.", fetchedAt: "2026-10-13T00:00:00.000Z", attachments: [] } }]));
+    const result = await runIngestCli(["publish"], { paths });
+    expect(result.exitCode).toBe(0);
+    expect(JSON.parse(await readFile(join(paths.knowledge, "items.json"), "utf8"))).toHaveLength(1);
+  });
+
   it("requires confirmation before withdrawal", async () => {
     const paths = await workspace();
     const withdraw = vi.fn();

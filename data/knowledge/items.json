@@ -1,12 +1,65 @@
 [
   {
     "schemaVersion": 1,
+    "id": "isb-activities-3fcbdff118f8c030701778ea",
+    "title": "After School Activities (ASA) - International School of Beijing",
+    "content": "Co-Curricular Activities - ISB MIDDLE SCHOOL / HIGH SCHOOL CLUBS There are a wide range of clubs for middle and high school students to get involved in - from photography, design and magazine clubs to World Scholars and the Model United Nations. Clubs usually run for a whole semester or, more commonly, for the entire academic year. Students register for clubs at the start of the school year. A selection of clubs are shown below: Middle School Activities High School Clubs ASA Middle School Activities High School Clubs ASA",
+    "language": "en",
+    "category": "activities",
+    "tags": [
+      "activities",
+      "isb-activities"
+    ],
+    "sourceId": "isb-activities",
+    "sourceUrl": "https://www.isb.cn/co-curricular/activities",
+    "sourceType": "official-web",
+    "publishedAt": "2026-10-13T07:51:35.208Z",
+    "validFrom": "2026-10-13T07:51:41.919Z",
+    "validUntil": "2027-10-13T07:51:41.919Z",
+    "crawledAt": "2026-10-13T07:51:35.208Z",
+    "contentHash": "47a8921ab9afaa53f2af203e5ce18f2ddbb8d34ede8efd661231fbd315056182",
+    "upstreamVersion": "47a8921ab9afaa53",
+    "visibility": "public",
+    "reviewStatus": "auto-published",
+    "confidence": 0.9,
+    "warnings": []
+  },
+  {
+    "schemaVersion": 1,
+    "id": "isb-calendar-ab60db27e9e7e69d5bea2035",
+    "title": "International School in Beijing | ISB Calendar",
+    "content": "Learn how to manage ISB Calendar on your phone ** Follow these instructions in the browser of your iPhone. Due to wide variation in operating systems, users of other types of devices are best to refer to official guidelines from their device’s manufacturer. We have linked some of these in the first link below. If your calendar app stops updating or syncing ISB events, please remove the calendar and then re-subscribe again This usually happens after a device operating system update or a Finalsite system update. Embed: hide sync info Embed - isb.calendar",
+    "language": "en",
+    "category": "calendar",
+    "tags": [
+      "calendar",
+      "isb-calendar"
+    ],
+    "sourceId": "isb-calendar",
+    "sourceUrl": "https://www.isb.cn/news-medianews/calendar",
+    "sourceType": "official-web",
+    "publishedAt": "2026-10-02T23:45:00.000Z",
+    "validFrom": "2026-10-13T07:51:41.919Z",
+    "validUntil": "2027-10-13T07:51:41.919Z",
+    "crawledAt": "2026-10-13T07:51:38.428Z",
+    "contentHash": "6b0cebca6de38aab33105bdf737f8e584f07609c3d23473ebf212bd22124b2a6",
+    "upstreamVersion": "6b0cebca6de38aab",
+    "visibility": "public",
+    "reviewStatus": "auto-published",
+    "confidence": 0.9,
+    "warnings": []
+  },
+  {
+    "schemaVersion": 1,
     "id": "isb-official-website",
     "title": "International School of Beijing official website",
     "content": "The International School of Beijing publishes public school information on its official website.",
     "language": "en",
     "category": "policies",
-    "tags": ["official", "school"],
+    "tags": [
+      "official",
+      "school"
+    ],
     "sourceId": "isb-public-site",
     "sourceUrl": "https://www.isb.cn/",
     "sourceType": "official-web",
@@ -19,6 +72,56 @@
     "visibility": "public",
     "reviewStatus": "approved",
     "confidence": 1,
+    "warnings": []
+  },
+  {
+    "schemaVersion": 1,
+    "id": "isb-public-a03b9be7ffb627b9628066eb",
+    "title": "International School of Beijing | Early Years (EY) - IB Diploma",
+    "content": "Your web browser does not support the <video> tag.ISB is a school with spirit, a Dragon Spirit Welcome Why ISB As the largest and most established international school in Beijing, The International School of Beijing has had a tradition of excellence since 1980. With a non-profit model, a research-based approach to education, and world-class facilities on our beautiful campus, we ensure our students can achieve and discover their passions. ISB students from early years through grade 12 are socially and emotionally healthy, experience challenging and joyful learning every day, and are destined for success once they graduate, wherever in the world they choose to pursue it. ISB 3 Strategic Focus Areas Challenging & Joyful Learning This is our core priority. We are focused on quality academic programming especially literacy plus science, technology, engineering, and math (STEAM), ensuring appropriate challenge for ALL learners so that every student is achieving their potential in core courses. Our innovative recruitment also ensures great teachers continue to choose ISB. Purpose and Compassion We use ISB’s resources to empower students to purpose and compassion. School is about so much more than academics! We ensure our students have integrity, strength of character, and that they are healthy socially and emotionally. To that end, we want each student to find at least one academic area and one co-curricular pursuit they are passionate about and in which they can excel. Our students get to sample real-world professional experience and have chance to provide service to others and create a positive social impact. Relationships Our inclusive international community is full of strong, lifelong peer relationships across national, linguistic, and cultural lines. Our social-emotional learning program is strongly focused on relationships, and our co-curricular teams and performance groups coach peer collaboration. ISB is also developing the greatest alumni network in Asia. ISB Numbers 40+ Years tradition of excellence in Beijing 1:8 Faculty to student ratio 180+ HS Courses offered 2 Purpose-built sports dome 200+ Co-curricular activities 2 Performing Arts Centers 75% Faculty with advanced degrees 100% Diploma Pass Rate 2 Library media centers 1 Aquatic center Alumni Meet our community The ISB community stretches way beyond those families currently enrolled in the school. With more than 40 years’ worth of graduates, ISB’s alumni network is large and vibrant. Wherever they are in the world, members benefit professionally and socially, and alumni give back to their alma mater by offering mentoring, career, and internship opportunities to current students. As we say, once a Dragon, always a Dragon! Leila Akahloun \"ISB provided me with a solid academic foundation and eye-opening international experiences through my participation at THIMUN and BEIMUN events. I was able to handle my undergraduate and graduate classes with relative ease thanks to the rigor of the IB curriculum at ISB, which then positioned me well to pursue a career in international development.\" Fred Chang \"Being at ISB has allowed me to develop my skills in learning new technologies and comfortably incorporating them in my work flow. Combine that with all the different nationalities and cultural backgrounds in the classroom, it became very clear to me I was in a very special place and well-positioned for the global economy.\" Ethan Houston \"I did the first half of the IB Programme and then I decided to do something different. It doesn't work for everyone and they let you design your studies more yourself.\" Eric Livdahl \"ISB prepped me most for my current career by creating constant opportunities to interact with new people and places through APAC and China Studies trips, and forcing me to work and make friends with an ever-changing international group from a wide variety of cultural, economic and linguistic backgrounds.\" Christopher Nobre \"Flat out the best college prep I could have ever imagined. While my new friends and classmates were struggling through the first few weeks and months of engineering at a top university, I felt right at home with the rigor of the IB Programme. I'm also thankful for the CAS program that pushed me to explore new things and encouraged me to live a more balanced lifestyle.\" Camille Cheng When Beijing hosted the 2008 Olympics, then 15-year-old ISB student Camille Cheng ('11) tried to see every swimming session from the bleachers of the Water Cube. Eight years later, she made her own mark at the Rio Olympics representing Hong Kong in the 200-meter freestyle and 400-meter medley. She shared her experience of competing at the pinnacle of her sport. Highlights ISB Life Sep 8 The ongoing connection between ISB and its alumni can benefit both today’s students and the wider school community. Through financial philanthropy, mentoring, sharing professional expertise, and bringing people together, alumni can continue to contribute long after they graduate. Aug 31 With an average Diploma score of 35.9 and nearly three-quarters of students achieving 35 points or higher, this year’s results reflect an impressive breadth of achievement across ISB’s graduating class. Aug 28 The ISB Hong Bao Design Initiative returns as an annual community tradition, bringing together creativity, culture, and generosity in a meaningful way. Aug 21 For the third consecutive year, the International School of Beijing (ISB) has been ranked the No. 1 international school in China by Hurun Education. Explore More Where Next Embed: Home Page News: Hide first posts Embed: Schema code",
+    "language": "en",
+    "category": "policies",
+    "tags": [
+      "policies",
+      "isb-public"
+    ],
+    "sourceId": "isb-public",
+    "sourceUrl": "https://www.isb.cn/",
+    "sourceType": "official-web",
+    "publishedAt": "2026-09-08T01:15:00.000Z",
+    "validFrom": "2026-10-13T07:51:41.919Z",
+    "validUntil": "2027-10-13T07:51:41.919Z",
+    "crawledAt": "2026-10-13T07:51:32.924Z",
+    "contentHash": "5f7f701c9496a8d368e8ba3a297cc1acf67ff941dbcd4eeedfbdff8d6bd85fc3",
+    "upstreamVersion": "5f7f701c9496a8d3",
+    "visibility": "public",
+    "reviewStatus": "auto-published",
+    "confidence": 0.9,
+    "warnings": []
+  },
+  {
+    "schemaVersion": 1,
+    "id": "isb-tuition-fees-3a755c4c3393da9533c0bdda",
+    "title": "International School in Beijing | ISB Tuition & Fees",
+    "content": "ISB is a non-profit school and all fees are channeled back into the school. Our tuition fees cover all expenses related to the day-to-day operation of the educational programs we offer. The capital fee contributes to the school's costs for construction, furniture and fixtures, debt retirement, and technology which includes a one-to-one iPad/laptop program for students in grades 2 through 12. Embed for table & tabs Embed",
+    "language": "en",
+    "category": "forms",
+    "tags": [
+      "forms",
+      "isb-tuition-fees"
+    ],
+    "sourceId": "isb-tuition-fees",
+    "sourceUrl": "https://www.isb.cn/admissions/tuition-fees",
+    "sourceType": "official-web",
+    "publishedAt": "2026-10-13T07:51:40.650Z",
+    "validFrom": "2026-10-13T07:51:41.919Z",
+    "validUntil": "2027-10-13T07:51:41.919Z",
+    "crawledAt": "2026-10-13T07:51:40.650Z",
+    "contentHash": "e889e8077b09ad98349c1f5467dafe8cc3eb68676676dc0b41ae54dfded8ae5a",
+    "upstreamVersion": "e889e8077b09ad98",
+    "visibility": "public",
+    "reviewStatus": "auto-published",
+    "confidence": 0.9,
     "warnings": []
   }
 ]

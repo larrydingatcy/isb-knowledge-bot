@@ -3,6 +3,56 @@
   "items": [
     {
       "schemaVersion": 1,
+      "id": "isb-activities-3fcbdff118f8c030701778ea",
+      "title": "After School Activities (ASA) - International School of Beijing",
+      "content": "Co-Curricular Activities - ISB MIDDLE SCHOOL / HIGH SCHOOL CLUBS There are a wide range of clubs for middle and high school students to get involved in - from photography, design and magazine clubs to World Scholars and the Model United Nations. Clubs usually run for a whole semester or, more commonly, for the entire academic year. Students register for clubs at the start of the school year. A selection of clubs are shown below: Middle School Activities High School Clubs ASA Middle School Activities High School Clubs ASA",
+      "language": "en",
+      "category": "activities",
+      "tags": [
+        "activities",
+        "isb-activities"
+      ],
+      "sourceId": "isb-activities",
+      "sourceUrl": "https://www.isb.cn/co-curricular/activities",
+      "sourceType": "official-web",
+      "publishedAt": "2026-10-13T07:51:35.208Z",
+      "validFrom": "2026-10-13T07:51:41.919Z",
+      "validUntil": "2027-10-13T07:51:41.919Z",
+      "crawledAt": "2026-10-13T07:51:35.208Z",
+      "contentHash": "47a8921ab9afaa53f2af203e5ce18f2ddbb8d34ede8efd661231fbd315056182",
+      "upstreamVersion": "47a8921ab9afaa53",
+      "visibility": "public",
+      "reviewStatus": "auto-published",
+      "confidence": 0.9,
+      "warnings": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "isb-calendar-ab60db27e9e7e69d5bea2035",
+      "title": "International School in Beijing | ISB Calendar",
+      "content": "Learn how to manage ISB Calendar on your phone ** Follow these instructions in the browser of your iPhone. Due to wide variation in operating systems, users of other types of devices are best to refer to official guidelines from their device’s manufacturer. We have linked some of these in the first link below. If your calendar app stops updating or syncing ISB events, please remove the calendar and then re-subscribe again This usually happens after a device operating system update or a Finalsite system update. Embed: hide sync info Embed - isb.calendar",
+      "language": "en",
+      "category": "calendar",
+      "tags": [
+        "calendar",
+        "isb-calendar"
+      ],
+      "sourceId": "isb-calendar",
+      "sourceUrl": "https://www.isb.cn/news-medianews/calendar",
+      "sourceType": "official-web",
+      "publishedAt": "2026-10-02T23:45:00.000Z",
+      "validFrom": "2026-10-13T07:51:41.919Z",
+      "validUntil": "2027-10-13T07:51:41.919Z",
+      "crawledAt": "2026-10-13T07:51:38.428Z",
+      "contentHash": "6b0cebca6de38aab33105bdf737f8e584f07609c3d23473ebf212bd22124b2a6",
+      "upstreamVersion": "6b0cebca6de38aab",
+      "visibility": "public",
+      "reviewStatus": "auto-published",
+      "confidence": 0.9,
+      "warnings": []
+    },
+    {
+      "schemaVersion": 1,
       "id": "isb-official-website",
       "title": "International School of Beijing official website",
       "content": "The International School of Beijing publishes public school information on its official website.",
@@ -25,13 +75,67 @@
       "reviewStatus": "approved",
       "confidence": 1,
       "warnings": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "isb-public-a03b9be7ffb627b9628066eb",
+      "title": "International School of Beijing | Early Years (EY) - IB Diploma",
+      "content": "Your web browser does not support the <video> tag.ISB is a school with spirit, a Dragon Spirit Welcome Why ISB As the largest and most established international school in Beijing, The International School of Beijing has had a tradition of excellence since 1980. With a non-profit model, a research-based approach to education, and world-class facilities on our beautiful campus, we ensure our students can achieve and discover their passions. ISB students from early years through grade 12 are socially and emotionally healthy, experience challenging and joyful learning every day, and are destined for success once they graduate, wherever in the world they choose to pursue it. ISB 3 Strategic Focus Areas Challenging & Joyful Learning This is our core priority. We are focused on quality academic programming especially literacy plus science, technology, engineering, and math (STEAM), ensuring appropriate challenge for ALL learners so that every student is achieving their potential in core courses. Our innovative recruitment also ensures great teachers continue to choose ISB. Purpose and Compassion We use ISB’s resources to empower students to purpose and compassion. School is about so much more than academics! We ensure our students have integrity, strength of character, and that they are healthy socially and emotionally. To that end, we want each student to find at least one academic area and one co-curricular pursuit they are passionate about and in which they can excel. Our students get to sample real-world professional experience and have chance to provide service to others and create a positive social impact. Relationships Our inclusive international community is full of strong, lifelong peer relationships across national, linguistic, and cultural lines. Our social-emotional learning program is strongly focused on relationships, and our co-curricular teams and performance groups coach peer collaboration. ISB is also developing the greatest alumni network in Asia. ISB Numbers 40+ Years tradition of excellence in Beijing 1:8 Faculty to student ratio 180+ HS Courses offered 2 Purpose-built sports dome 200+ Co-curricular activities 2 Performing Arts Centers 75% Faculty with advanced degrees 100% Diploma Pass Rate 2 Library media centers 1 Aquatic center Alumni Meet our community The ISB community stretches way beyond those families currently enrolled in the school. With more than 40 years’ worth of graduates, ISB’s alumni network is large and vibrant. Wherever they are in the world, members benefit professionally and socially, and alumni give back to their alma mater by offering mentoring, career, and internship opportunities to current students. As we say, once a Dragon, always a Dragon! Leila Akahloun \"ISB provided me with a solid academic foundation and eye-opening international experiences through my participation at THIMUN and BEIMUN events. I was able to handle my undergraduate and graduate classes with relative ease thanks to the rigor of the IB curriculum at ISB, which then positioned me well to pursue a career in international development.\" Fred Chang \"Being at ISB has allowed me to develop my skills in learning new technologies and comfortably incorporating them in my work flow. Combine that with all the different nationalities and cultural backgrounds in the classroom, it became very clear to me I was in a very special place and well-positioned for the global economy.\" Ethan Houston \"I did the first half of the IB Programme and then I decided to do something different. It doesn't work for everyone and they let you design your studies more yourself.\" Eric Livdahl \"ISB prepped me most for my current career by creating constant opportunities to interact with new people and places through APAC and China Studies trips, and forcing me to work and make friends with an ever-changing international group from a wide variety of cultural, economic and linguistic backgrounds.\" Christopher Nobre \"Flat out the best college prep I could have ever imagined. While my new friends and classmates were struggling through the first few weeks and months of engineering at a top university, I felt right at home with the rigor of the IB Programme. I'm also thankful for the CAS program that pushed me to explore new things and encouraged me to live a more balanced lifestyle.\" Camille Cheng When Beijing hosted the 2008 Olympics, then 15-year-old ISB student Camille Cheng ('11) tried to see every swimming session from the bleachers of the Water Cube. Eight years later, she made her own mark at the Rio Olympics representing Hong Kong in the 200-meter freestyle and 400-meter medley. She shared her experience of competing at the pinnacle of her sport. Highlights ISB Life Sep 8 The ongoing connection between ISB and its alumni can benefit both today’s students and the wider school community. Through financial philanthropy, mentoring, sharing professional expertise, and bringing people together, alumni can continue to contribute long after they graduate. Aug 31 With an average Diploma score of 35.9 and nearly three-quarters of students achieving 35 points or higher, this year’s results reflect an impressive breadth of achievement across ISB’s graduating class. Aug 28 The ISB Hong Bao Design Initiative returns as an annual community tradition, bringing together creativity, culture, and generosity in a meaningful way. Aug 21 For the third consecutive year, the International School of Beijing (ISB) has been ranked the No. 1 international school in China by Hurun Education. Explore More Where Next Embed: Home Page News: Hide first posts Embed: Schema code",
+      "language": "en",
+      "category": "policies",
+      "tags": [
+        "policies",
+        "isb-public"
+      ],
+      "sourceId": "isb-public",
+      "sourceUrl": "https://www.isb.cn/",
+      "sourceType": "official-web",
+      "publishedAt": "2026-09-08T01:15:00.000Z",
+      "validFrom": "2026-10-13T07:51:41.919Z",
+      "validUntil": "2027-10-13T07:51:41.919Z",
+      "crawledAt": "2026-10-13T07:51:32.924Z",
+      "contentHash": "5f7f701c9496a8d368e8ba3a297cc1acf67ff941dbcd4eeedfbdff8d6bd85fc3",
+      "upstreamVersion": "5f7f701c9496a8d3",
+      "visibility": "public",
+      "reviewStatus": "auto-published",
+      "confidence": 0.9,
+      "warnings": []
+    },
+    {
+      "schemaVersion": 1,
+      "id": "isb-tuition-fees-3a755c4c3393da9533c0bdda",
+      "title": "International School in Beijing | ISB Tuition & Fees",
+      "content": "ISB is a non-profit school and all fees are channeled back into the school. Our tuition fees cover all expenses related to the day-to-day operation of the educational programs we offer. The capital fee contributes to the school's costs for construction, furniture and fixtures, debt retirement, and technology which includes a one-to-one iPad/laptop program for students in grades 2 through 12. Embed for table & tabs Embed",
+      "language": "en",
+      "category": "forms",
+      "tags": [
+        "forms",
+        "isb-tuition-fees"
+      ],
+      "sourceId": "isb-tuition-fees",
+      "sourceUrl": "https://www.isb.cn/admissions/tuition-fees",
+      "sourceType": "official-web",
+      "publishedAt": "2026-10-13T07:51:40.650Z",
+      "validFrom": "2026-10-13T07:51:41.919Z",
+      "validUntil": "2027-10-13T07:51:41.919Z",
+      "crawledAt": "2026-10-13T07:51:40.650Z",
+      "contentHash": "e889e8077b09ad98349c1f5467dafe8cc3eb68676676dc0b41ae54dfded8ae5a",
+      "upstreamVersion": "e889e8077b09ad98",
+      "visibility": "public",
+      "reviewStatus": "auto-published",
+      "confidence": 0.9,
+      "warnings": []
     }
   ],
   "miniSearch": {
-    "documentCount": 1,
-    "nextId": 1,
+    "documentCount": 5,
+    "nextId": 5,
     "documentIds": {
-      "0": "isb-official-website"
+      "0": "isb-activities-3fcbdff118f8c030701778ea",
+      "1": "isb-calendar-ab60db27e9e7e69d5bea2035",
+      "2": "isb-official-website",
+      "3": "isb-public-a03b9be7ffb627b9628066eb",
+      "4": "isb-tuition-fees-3a755c4c3393da9533c0bdda"
     },
     "fieldIds": {
       "title": 0,
@@ -41,26 +145,699 @@
     },
     "fieldLength": {
       "0": [
+        7,
+        48,
+        1,
+        2
+      ],
+      "1": [
+        6,
+        69,
+        1,
+        2
+      ],
+      "2": [
         6,
         12,
         1,
         2
+      ],
+      "3": [
+        9,
+        464,
+        1,
+        3
+      ],
+      "4": [
+        7,
+        54,
+        1,
+        4
       ]
     },
     "averageFieldLength": [
-      6,
-      12,
+      7,
+      129.4,
       1,
-      2
+      2.6
     ],
     "storedFields": {},
     "dirtCount": 0,
     "index": [
       [
+        "quarters",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "quality",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "9",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "kong",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "75",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "21",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "28",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "2008",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "200",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "2",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "8",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "400",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "40",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "35",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "31",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "3",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "joyful",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "11",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "15",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "100",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "180",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "1",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "12",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "1980",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "variety",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "variation",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "very",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "vibrant",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "video",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "next",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "nearly",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "news",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "new",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "network",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "numbers",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "nationalities",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "national",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "nations",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "no",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "nobre",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "non",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "not",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "philanthropy",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "phone",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "photography",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "pinnacle",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "page",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "participation",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "pass",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "passionate",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "passions",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "people",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "performing",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "performance",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "peer",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "posts",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "positioned",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "positive",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "points",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "potential",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
         "policies",
         {
           "2": {
-            "0": 1
+            "2": 1,
+            "3": 1
+          },
+          "3": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "places",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "place",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "plus",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "please",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "prep",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "prepped",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "programs",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "programme",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "programming",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "program",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "provided",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "provide",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "professionally",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "professional",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "profit",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "priority",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "pushed",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "pursuit",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "pursue",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "purpose",
+        {
+          "1": {
+            "3": 1
           }
         }
       ],
@@ -68,7 +845,10 @@
         "public",
         {
           "1": {
-            "0": 1
+            "2": 1
+          },
+          "3": {
+            "3": 1
           }
         }
       ],
@@ -76,86 +856,909 @@
         "publishes",
         {
           "1": {
-            "0": 1
+            "2": 1
           }
         }
       ],
       [
-        "its",
+        "eight",
         {
           "1": {
-            "0": 1
+            "3": 1
           }
         }
       ],
       [
-        "information",
+        "economic",
         {
           "1": {
-            "0": 1
+            "3": 1
           }
         }
       ],
       [
-        "international",
-        {
-          "0": {
-            "0": 1
-          },
-          "1": {
-            "0": 1
-          }
-        }
-      ],
-      [
-        "on",
+        "economy",
         {
           "1": {
-            "0": 1
+            "3": 1
           }
         }
       ],
       [
-        "official",
-        {
-          "0": {
-            "0": 1
-          },
-          "1": {
-            "0": 1
-          },
-          "3": {
-            "0": 1
-          }
-        }
-      ],
-      [
-        "of",
-        {
-          "0": {
-            "0": 1
-          },
-          "1": {
-            "0": 1
-          }
-        }
-      ],
-      [
-        "the",
+        "eric",
         {
           "1": {
-            "0": 1
+            "3": 1
           }
         }
       ],
       [
-        "website",
+        "ethan",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "ease",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "each",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "early",
         {
           "0": {
-            "0": 1
+            "3": 1
           },
           "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "especially",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "established",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "ever",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "everyone",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "every",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "events",
+        {
+          "1": {
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "expenses",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "expertise",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "experiences",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "experience",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "explore",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "excel",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "excellence",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "emotional",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "emotionally",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "empower",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "embed",
+        {
+          "1": {
+            "1": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "encouraged",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "enrolled",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "end",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "ensuring",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "ensures",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "ensure",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "engineering",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "entire",
+        {
+          "1": {
             "0": 1
+          }
+        }
+      ],
+      [
+        "educational",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "education",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "eye",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "ey",
+        {
+          "0": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "long",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "laptop",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "later",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "large",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "largest",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "let",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "leila",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "least",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "learners",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "learning",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "learn",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "life",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "lifestyle",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "lifelong",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "live",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "livdahl",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "library",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "lines",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "linguistic",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "link",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "linked",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "literacy",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "generosity",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "get",
+        {
+          "1": {
+            "0": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "global",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "give",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "group",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "groups",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "greatest",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "great",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "graduating",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "graduates",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "graduate",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "grades",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "grade",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "guidelines",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "do",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "dome",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "doesn",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "does",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "day",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "did",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "different",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "discover",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "diploma",
+        {
+          "0": {
+            "3": 1
+          },
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "dragon",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "debt",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "decided",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "degrees",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "develop",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "development",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "developing",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "device",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "devices",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "destined",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "design",
+        {
+          "1": {
+            "0": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "due",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "breadth",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "bringing",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "browser",
+        {
+          "1": {
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "both",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "bleachers",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "by",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "bao",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "balanced",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "backgrounds",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "back",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "based",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "built",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "been",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "between",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "became",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "being",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "beimun",
+        {
+          "1": {
+            "3": 1
           }
         }
       ],
@@ -163,8 +1766,1736 @@
         "beijing",
         {
           "0": {
-            "0": 1
+            "0": 1,
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1
           },
+          "1": {
+            "2": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "benefit",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "beyond",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "beautiful",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "best",
+        {
+          "1": {
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "below",
+        {
+          "1": {
+            "0": 1,
+            "1": 1
+          }
+        }
+      ],
+      [
+        "you",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "yourself",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "your",
+        {
+          "1": {
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "years",
+        {
+          "0": {
+            "3": 1
+          },
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "year",
+        {
+          "1": {
+            "0": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "hurun",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "her",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "healthy",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "hong",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "hosted",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "home",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "houston",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "how",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "hs",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "hide",
+        {
+          "1": {
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "higher",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "highlights",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "high",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "half",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "handle",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "had",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "has",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "happens",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "have",
+        {
+          "1": {
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "own",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "old",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "olympics",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "out",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "our",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "operation",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "operating",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "opening",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "opportunities",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "others",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "other",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "ongoing",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "one",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "once",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "on",
+        {
+          "1": {
+            "1": 1,
+            "2": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "or",
+        {
+          "1": {
+            "0": 1,
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "offer",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "offering",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "offered",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "official",
+        {
+          "0": {
+            "2": 1
+          },
+          "1": {
+            "1": 1,
+            "2": 1
+          },
+          "3": {
+            "2": 1
+          }
+        }
+      ],
+      [
+        "of",
+        {
+          "0": {
+            "0": 1,
+            "2": 1,
+            "3": 1
+          },
+          "1": {
+            "0": 1,
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "rio",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "right",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "rigor",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "ranked",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "range",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "rate",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "ratio",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "retirement",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "returns",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "related",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "relative",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "relationships",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "reflect",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "refer",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "representing",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "real",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "results",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "resources",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "research",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "recruitment",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "re",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "remove",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "register",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "run",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "university",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "united",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "undergraduate",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "update",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "updating",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "use",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "users",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "usually",
+        {
+          "1": {
+            "0": 1,
+            "1": 1
+          }
+        }
+      ],
+      [
+        "work",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "worth",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "world",
+        {
+          "1": {
+            "0": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "water",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "was",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "way",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "want",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "where",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "wherever",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "when",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "while",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "which",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "why",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "whole",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "with",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "wider",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "wide",
+        {
+          "1": {
+            "0": 1,
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "weeks",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "were",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "well",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "welcome",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "web",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "website",
+        {
+          "0": {
+            "2": 1
+          },
+          "1": {
+            "2": 1
+          }
+        }
+      ],
+      [
+        "we",
+        {
+          "1": {
+            "1": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "m",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "my",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "meaningful",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "medley",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "media",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "meter",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "me",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "mentoring",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "members",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "meet",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "much",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "mark",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "made",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "make",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "mater",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "math",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "manufacturer",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "manage",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "magazine",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "months",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "most",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "more",
+        {
+          "1": {
+            "0": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "model",
+        {
+          "1": {
+            "0": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "middle",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "furniture",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "full",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "fee",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "fees",
+        {
+          "0": {
+            "4": 1
+          },
+          "1": {
+            "4": 1
+          },
+          "3": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "felt",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "few",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "flat",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "flow",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "freestyle",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "fred",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "friends",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "from",
+        {
+          "1": {
+            "0": 1,
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "families",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "faculty",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "facilities",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "fixtures",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "financial",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "finalsite",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "find",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "first",
+        {
+          "1": {
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "foundation",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "focused",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "focus",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "follow",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "forms",
+        {
+          "2": {
+            "4": 1
+          },
+          "3": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "forcing",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "for",
+        {
+          "1": {
+            "0": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "tabs",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "table",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "tag",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "tuition",
+        {
+          "0": {
+            "4": 1
+          },
+          "1": {
+            "4": 1
+          },
+          "3": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "tried",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "trips",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "tradition",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "t",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "technologies",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "technology",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "teams",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "teachers",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "three",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "through",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "third",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "things",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "thimun",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "this",
+        {
+          "1": {
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "those",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "thankful",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "thanks",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "than",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "that",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "them",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "they",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "then",
+        {
+          "1": {
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "their",
+        {
+          "1": {
+            "1": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "these",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "the",
+        {
+          "1": {
+            "0": 1,
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "there",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "types",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "together",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "today",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "top",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "to",
+        {
+          "1": {
+            "0": 1,
+            "1": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "sharing",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "shared",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "she",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "shown",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "swimming",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "skills",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "say",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "sample",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "sport",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "sports",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "special",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "spirit",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "schema",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "scholars",
+        {
           "1": {
             "0": 1
           }
@@ -174,13 +3505,1369 @@
         "school",
         {
           "0": {
+            "0": 1,
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1
+          },
+          "1": {
+            "0": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1
+          },
+          "3": {
+            "2": 1
+          }
+        }
+      ],
+      [
+        "score",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "science",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "solid",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "social",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "socially",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "so",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "something",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "some",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "since",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "success",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "support",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "subscribe",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "sync",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "syncing",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "system",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "systems",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "s",
+        {
+          "1": {
+            "1": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "sep",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "session",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "see",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "service",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "selection",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "semester",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "studies",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "student",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "students",
+        {
+          "1": {
+            "0": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "struggling",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "stretches",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "strength",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "strongly",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "strong",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "strategic",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "steam",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "stops",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "start",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "ipad",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "iphone",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "impressive",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "impact",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "imagined",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "i",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "it",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "its",
+        {
+          "1": {
+            "2": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "is",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "isb",
+        {
+          "0": {
+            "1": 1,
+            "4": 1
+          },
+          "1": {
+            "0": 1,
+            "1": 1,
+            "3": 1,
+            "4": 1
+          },
+          "3": {
+            "0": 1,
+            "1": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "ib",
+        {
+          "0": {
+            "3": 1
+          },
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "if",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "into",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "interact",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "internship",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "international",
+        {
+          "0": {
+            "0": 1,
+            "1": 1,
+            "2": 1,
+            "3": 1,
+            "4": 1
+          },
+          "1": {
+            "2": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "integrity",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "initiative",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "includes",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "inclusive",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "incorporating",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "innovative",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "information",
+        {
+          "1": {
+            "2": 1
+          }
+        }
+      ],
+      [
+        "info",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "instructions",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "in",
+        {
+          "0": {
+            "1": 1,
+            "4": 1
+          },
+          "1": {
+            "0": 1,
+            "1": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "involved",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "creativity",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "creating",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "create",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "center",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "centers",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "culture",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "cultural",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "cube",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "curriculum",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "curricular",
+        {
+          "1": {
+            "0": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "current",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "currently",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "cheng",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "christopher",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "china",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "channeled",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "changing",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "chang",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "chance",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "character",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "challenge",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "challenging",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "choose",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "capital",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "camille",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "campus",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "cas",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "career",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "can",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "calendar",
+        {
+          "0": {
+            "1": 1
+          },
+          "1": {
+            "1": 1
+          },
+          "2": {
+            "1": 1
+          },
+          "3": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "clear",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "classmates",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "classroom",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "classes",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "class",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "clubs",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "costs",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "cover",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "code",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "could",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "courses",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "college",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "collaboration",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "construction",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "constant",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "consecutive",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "contributes",
+        {
+          "1": {
+            "4": 1
+          }
+        }
+      ],
+      [
+        "contribute",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "continue",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "connection",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "coach",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "competing",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "compassion",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "combine",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "comfortably",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "community",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "commonly",
+        {
+          "1": {
+            "0": 1
+          }
+        }
+      ],
+      [
+        "core",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "co",
+        {
+          "1": {
+            "0": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "average",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "aug",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "annual",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "an",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "and",
+        {
+          "1": {
+            "0": 1,
+            "1": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "apac",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "appropriate",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "approach",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "app",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "able",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "about",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "akahloun",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "aquatic",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "advanced",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "arts",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "area",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "areas",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "are",
+        {
+          "1": {
+            "0": 1,
+            "1": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "always",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "alma",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "alumni",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "also",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "allowed",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "all",
+        {
+          "1": {
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "asia",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "as",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "asa",
+        {
+          "0": {
             "0": 1
           },
           "1": {
             "0": 1
+          }
+        }
+      ],
+      [
+        "again",
+        {
+          "1": {
+            "1": 1
+          }
+        }
+      ],
+      [
+        "at",
+        {
+          "1": {
+            "0": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "across",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "achieving",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "achievement",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "achieve",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "academics",
+        {
+          "1": {
+            "3": 1
+          }
+        }
+      ],
+      [
+        "academic",
+        {
+          "1": {
+            "0": 1,
+            "3": 1
+          }
+        }
+      ],
+      [
+        "activities",
+        {
+          "0": {
+            "0": 1
+          },
+          "1": {
+            "0": 1,
+            "3": 1
+          },
+          "2": {
+            "0": 1
           },
           "3": {
             "0": 1
+          }
+        }
+      ],
+      [
+        "a",
+        {
+          "1": {
+            "0": 1,
+            "1": 1,
+            "3": 1,
+            "4": 1
+          }
+        }
+      ],
+      [
+        "after",
+        {
+          "0": {
+            "0": 1
+          },
+          "1": {
+            "1": 1,
+            "3": 1
           }
         }
       ]

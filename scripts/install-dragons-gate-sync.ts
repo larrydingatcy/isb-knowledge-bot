@@ -20,7 +20,8 @@ await writeFile(configPath, `${JSON.stringify({ token: randomBytes(32).toString(
 await chmod(configPath, 0o600);
 const template = await readFile(resolve(root, "local/dragons-gate/launchd/com.isb.dragons-gate-receiver.plist.template"), "utf8");
 const pnpm = (await execFileAsync("which", ["pnpm"])).stdout.trim();
-const replacements: Record<string, string> = { __PNPM__: pnpm, __START__: resolve(root, "local/dragons-gate/receiver/src/start.ts"), __CONFIG__: configPath, __WORKDIR__: root, __LOG__: join(support, "receiver.log") };
+const xml = (value: string) => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;").replaceAll("'", "&apos;");
+const replacements: Record<string, string> = { __PNPM__: xml(pnpm), __START__: xml(resolve(root, "local/dragons-gate/receiver/src/start.ts")), __CONFIG__: xml(configPath), __WORKDIR__: xml(root), __LOG__: xml(join(support, "receiver.log")) };
 const plist = Object.entries(replacements).reduce((value, [key, replacement]) => value.replaceAll(key, replacement), template);
 await writeFile(plistPath, plist, "utf8");
 await execFileAsync("launchctl", ["bootout", `gui/${process.getuid?.() ?? 0}`, plistPath]).catch(() => undefined);

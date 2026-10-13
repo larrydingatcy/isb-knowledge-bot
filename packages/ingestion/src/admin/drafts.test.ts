@@ -23,6 +23,8 @@ describe("draft state machine", () => {
     await store.create(draft({ state: "blocked", findings: [{ kind: "email", match: "redacted" }] }));
     await expect(store.approve("draft-1")).rejects.toThrow(/acknowledgment/i);
     await expect(store.approve("draft-1", { redactionAcknowledged: true, redactedText: "Sanitized general notice." })).resolves.toMatchObject({ state: "approved" });
+    const approved = await store.preview("draft-1");
+    expect(approved.contentHash).not.toBe("a".repeat(64));
   });
 
   it("rejects duplicate hashes and illegal transitions", async () => {
