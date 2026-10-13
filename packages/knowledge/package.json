@@ -1,0 +1,13 @@
+{
+  "name": "@isb/knowledge",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./schema": "./src/schema.ts",
+    "./migrations": "./src/migrations.ts"
+  },
+  "dependencies": {
+    "zod": "^4.1.0"
+  }
+}

@@ -1,0 +1,24 @@
+[
+  {
+    "schemaVersion": 1,
+    "id": "isb-official-website",
+    "title": "International School of Beijing official website",
+    "content": "The International School of Beijing publishes public school information on its official website.",
+    "language": "en",
+    "category": "policies",
+    "tags": ["official", "school"],
+    "sourceId": "isb-public-site",
+    "sourceUrl": "https://www.isb.cn/",
+    "sourceType": "official-web",
+    "publishedAt": "2026-10-13T00:00:00.000Z",
+    "validFrom": "2026-10-13T00:00:00.000Z",
+    "validUntil": "2027-10-13T00:00:00.000Z",
+    "crawledAt": "2026-10-13T08:00:00.000Z",
+    "contentHash": "d0f5debecf2c32f1eda9c9406083356161b8c596ba1a12d023aedeec3d0ed04f",
+    "upstreamVersion": "seed-2026-10-13",
+    "visibility": "public",
+    "reviewStatus": "approved",
+    "confidence": 1,
+    "warnings": []
+  }
+]

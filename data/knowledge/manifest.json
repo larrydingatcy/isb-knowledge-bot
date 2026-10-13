@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "indexVersion": "seed-v1",
+  "generatedAt": "2026-10-13T08:00:00.000Z",
+  "itemCount": 1,
+  "sourceFreshness": [
+    {
+      "sourceId": "isb-public-site",
+      "lastSuccessfulAt": "2026-10-13T08:00:00.000Z",
+      "status": "current"
+    }
+  ]
+}

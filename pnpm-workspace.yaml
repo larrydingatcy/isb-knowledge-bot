@@ -1,0 +1,6 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+  - "local/dragons-gate/*"
+  - "local/dragons-gate/receiver"
+  - "local/dragons-gate/extension"
