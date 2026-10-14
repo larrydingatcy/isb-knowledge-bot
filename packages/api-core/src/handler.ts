@@ -1,4 +1,4 @@
-import type { AnswerResult } from "@isb/answering/types";
+import type { AnswerResult } from "../../answering/src/types.js";
 import { ZodError } from "zod";
 
 import { corsHeaders, isOriginAllowed, type CorsOptions } from "./cors.js";

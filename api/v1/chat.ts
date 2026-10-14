@@ -1,10 +1,13 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
-import { answerQuestion } from "@isb/answering";
-import { createOpenAIModelClient } from "@isb/answering/model";
-import { createChatHandler } from "@isb/api-core";
-import { createUpstashAbuseGuard } from "@isb/api-core/rate-limit";
-import { createRetriever, type SerializedSearchIndex } from "@isb/knowledge/index";
+import { answerQuestion } from "../../packages/answering/src/answer.js";
+import { createOpenAIModelClient } from "../../packages/answering/src/model.js";
+import { createChatHandler } from "../../packages/api-core/src/handler.js";
+import { createUpstashAbuseGuard } from "../../packages/api-core/src/rate-limit.js";
+import {
+  createRetriever,
+  type SerializedSearchIndex,
+} from "../../packages/knowledge/src/index.js";
 
 import searchIndex from "../../data/knowledge/search-index.json" with { type: "json" };
 

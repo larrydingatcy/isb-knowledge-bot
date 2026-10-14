@@ -3,7 +3,7 @@ import type {
   RetrievalOptions,
   RetrievalResult,
   RetrieveFn
-} from "@isb/knowledge/retrieval";
+} from "../../knowledge/src/retrieval.js";
 
 import type {
   AnswerResult,

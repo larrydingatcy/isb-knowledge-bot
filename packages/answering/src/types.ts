@@ -1,4 +1,4 @@
-import type { Freshness } from "@isb/knowledge/retrieval";
+import type { Freshness } from "../../knowledge/src/retrieval.js";
 
 export interface GroundedEvidence {
   citationId: string;
