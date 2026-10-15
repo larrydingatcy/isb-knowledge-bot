@@ -36,6 +36,22 @@ function isPublishable(item: KnowledgeItem): boolean {
   );
 }
 
+const CHINESE_SEARCH_EXPANSIONS: ReadonlyArray<readonly [RegExp, string]> = [
+  [/课后活动|课外活动|活动|俱乐部/u, "after school activities clubs"],
+  [/报名|注册/u, "registration register"]
+];
+
+function expandCrossLanguageQuery(query: string, language: RetrievalOptions["language"]): string {
+  if (language !== "zh") {
+    return query;
+  }
+
+  const expansions = CHINESE_SEARCH_EXPANSIONS.flatMap(([pattern, terms]) =>
+    pattern.test(query) ? [terms] : []
+  );
+  return expansions.length > 0 ? `${query} ${expansions.join(" ")}` : query;
+}
+
 export function buildSearchIndex(items: KnowledgeItem[]): SerializedSearchIndex {
   const publicItems = items
     .filter(isPublishable)
@@ -64,20 +80,26 @@ export function createRetriever(serialized: SerializedSearchIndex): RetrieveFn {
       return [];
     }
 
+    const expanded = expandCrossLanguageQuery(normalized, options.language);
+
     return miniSearch
-      .search(normalized, { prefix: true, fuzzy: 0.2 })
+      .search(expanded, { prefix: true, fuzzy: 0.2 })
       .flatMap((result) => {
         const item = itemsById.get(String(result.id));
-        if (
-          !item ||
-          item.language !== options.language ||
-          (options.category && item.category !== options.category)
-        ) {
+        if (!item || (options.category && item.category !== options.category)) {
           return [];
         }
         return [{ item, score: result.score, freshness: classifyFreshness(item, options.now) }];
       })
-      .sort((left, right) => right.score - left.score || left.item.id.localeCompare(right.item.id))
+      .sort((left, right) => {
+        const leftLanguageMatch = left.item.language === options.language ? 1 : 0;
+        const rightLanguageMatch = right.item.language === options.language ? 1 : 0;
+        return (
+          rightLanguageMatch - leftLanguageMatch ||
+          right.score - left.score ||
+          left.item.id.localeCompare(right.item.id)
+        );
+      })
       .slice(0, Math.min(options.limit, 20));
   };
 }

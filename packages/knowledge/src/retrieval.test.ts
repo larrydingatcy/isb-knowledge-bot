@@ -58,6 +58,37 @@ describe("knowledge retrieval", () => {
     );
   });
 
+  test("falls_back_to_english_official_sources_for_chinese_queries", () => {
+    const search = retriever([item()]);
+
+    expect(
+      search("学生什么时候报名课后活动？", {
+        language: "zh",
+        category: "activities",
+        limit: 5,
+        now
+      })[0]?.item.id
+    ).toBe("asa-registration");
+  });
+
+  test("prefers_sources_in_the_requested_language", () => {
+    const search = retriever([
+      item(),
+      item({
+        id: "asa-zh",
+        title: "课后活动报名",
+        content: "学生在学年开始时报名课后活动。",
+        language: "zh"
+      })
+    ]);
+
+    expect(
+      search("课后活动 after-school activities", { language: "zh", limit: 5, now }).map(
+        (result) => result.item.id
+      )
+    ).toEqual(["asa-zh", "asa-registration"]);
+  });
+
   test("filters_by_category", () => {
     const search = retriever([
       item(),
